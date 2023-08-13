@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        background-color: #007BFF;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        border: 20px solid gray;
+        border-style: groove;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        background-color: #007BFF;
+        margin: 10px;
+        padding: 10px;
+        border: 20px solid gray;
+        border-style: groove;
+    }
+    
+    p {
+        margin: 10px ;
+        padding: 10px;
+        text-align: center;
+        
+    }
+    
+    li {
+        list-style-type: none;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+    
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    th:first-child, td:first-child {
+        text-align: left;
+    }
+    
+    .text{
+    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+    
+    }
+    
+    .text2{
+    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+    
+    }</style>
+</head>
+<body>
+    <h1>Resultado</h1>
+    <p>Promedio: {{ promedio }}</p>
+    <p>Moda: {{ moda }}</p>
+    <li>Percentil-1: {{ q1 }}</li>
+    <li>Percentil-2 ó mediana: {{ q2 }}</li>
+    <li>Percentil-3: {{ q3 }}</li>
+    <p>Rango Intercuatil: {{RI}}</p>
+    <p>Varianza: {{ varianza }}</p>
+    <p>Desviacion Estandar: {{ Desviacion_estandar }}</p>
+    <P>Coeficiente de variacion estandar: {{ CV }}</P>
+    <p>Media armonica: {{ Media_armonica}}</p>
+    <p>Media Geometica: {{Media_Geometica}}</p>
+    <h2>Tabla de Frecuencia</h2>
+    <table>
+        <tr>
+            <th>Valor</th>
+            <th>Frecuencia</th>
+            <th>Frecuencia Relativa</th>
+        </tr>
+        {% for value, count, rel_freq in frequency_table %}
+        <tr>
+            <td>{{ value }}</td>
+            <td>{{ count }}</td>
+            <td>{{ "%0.2f"|format(rel_freq) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Gráfico de Barras</h2>
+    <img src="data:image/png;base64,{{ plot_data }}" alt="Grafico de Barras">
+    </body>
+    </html>
+    
+    </body>
+    
+    
+</html>

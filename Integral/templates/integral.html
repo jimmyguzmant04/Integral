@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calcular Promedio y Moda</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    border: 20px solid darkblue;
+    border-style: groove;
+    background-color: gray;
+    
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #007BFF;
+    color: #fff;
+    border: 20px solid gray;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border-style: groove;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <h1>Ingrese 5 números</h1>
+    <form action="/integral" method="post">
+        <label for="d1">Primer número:</label>
+        <input type="number" name="d1" id="d1"><br>
+        <label for="d2">Segundo número:</label>
+        <input type="number" name="d2" id="d2"><br>
+        <label for="d3">Tercer número:</label>
+        <input type="number" name="d3" id="d3"><br>
+        <label for="d4">Cuarto número:</label>
+        <input type="number" name="d4" id="d4"><br>
+        <label for="d5">Quinto número:</label>
+        <input type="number" name="d5" id="d5"><br>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>
